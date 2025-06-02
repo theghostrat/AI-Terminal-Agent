@@ -48,6 +48,42 @@ An intelligent AI agent designed to automate and streamline software development
 
 To start the AI agent in interactive mode (requires permission for each action):
 
+### Global Installation (Command-Line Tool)
+
+To install the `ai-agent` globally and use it as a command-line tool from any directory:
+
+1.  **Install the tool globally:**
+    Navigate to the project root directory and run:
+    ```bash
+    npm link
+    # You might need to use 'sudo npm link' on some systems.
+    ```
+
+2.  **Set your GEMINI_API_KEY as a system-wide environment variable:**
+
+    *   **For Bash/Zsh (add to `~/.bashrc`, `~/.zshrc`, or `~/.profile`):**
+        ```bash
+        echo 'export GEMINI_API_KEY="your_gemini_api_key_here"' >> ~/.bashrc
+        source ~/.bashrc # Or ~/.zshrc, ~/.profile
+        ```
+        Replace `your_gemini_api_key_here` with your actual API key.
+
+    *   **For Fish (add to `~/.config/fish/config.fish`):**
+        ```fish
+        set -Ux GEMINI_API_KEY "your_gemini_api_key_here"
+        ```
+        Replace `your_gemini_api_key_here` with your actual API key.
+
+3.  **Run the `ai-agent` command:**
+    You can now run the `ai-agent` command from any directory:
+    ```bash
+    ai-agent
+    ```
+    To start in auto-approve mode:
+    ```bash
+    AUTO_APPROVE=true ai-agent
+    ```
+
 ```bash
 npm start
 ```
